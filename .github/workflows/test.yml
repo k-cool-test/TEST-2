@@ -4,8 +4,8 @@ name: TEST
 on:
   pull_request:
     types: [ opened ]
-    branches:    
-      - 'fix/**'
+    # branches:    
+    #   - 'fix/**'
       
 jobs:
   approve:
