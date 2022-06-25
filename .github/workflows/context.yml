@@ -13,5 +13,5 @@ jobs:
 
       - name: '토큰 확인'
         env:
-          TOKEN: ${{ github.token }}
+          TOKEN: ${{ secrets.TOKEN }}
         run: echo "token = $TOKEN"
