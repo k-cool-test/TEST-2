@@ -1,0 +1,23 @@
+
+name: Practice
+
+on:
+  push:
+    branches: [ "develop" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:  
+      - uses: actions/checkout@v3
+
+      - name: "context"
+        env: 
+          COMMIT_ID: ${{ github.sha }}
+        run: echo "Commit id = $COMMIT_ID
+
+      - name: Run a multi-line script
+        run: |
+          echo 1st line
+          echo 2nd line
