@@ -11,12 +11,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - name: 'context'
+      - name: '토큰 확인'
         env:
-          COMMIT_ID: ${{ github.sha }}
-        run: echo "Commit id = $COMMIT_ID"
-
-      - name: Run a multi-line script
-        run: |
-          echo 1st line
-          echo 2nd line
+          TOKEN: ${{ github.token }}
+        run: echo "token = $TOKEN"
